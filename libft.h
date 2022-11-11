@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:37:59 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/10 19:17:44 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/11 14:19:45 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 
 void	ft_bzero(void *s, size_t n);
+
+void	*ft_memset(void *s, int c, size_t n);
 
 int		ft_atoi(const char *str);
 
