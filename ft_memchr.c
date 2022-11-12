@@ -1,46 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 16:02:01 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/12 09:39:41 by maricard         ###   ########.fr       */
+/*   Created: 2022/11/12 09:41:46 by maricard          #+#    #+#             */
+/*   Updated: 2022/11/12 10:11:22 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (((char *)src) && n > i)
+	while ((unsigned char *)s && i < n)
 	{
-		((char *)dest)[i] = ((char *)src)[i];
+		if (((unsigned char *)s)[i] == c)
+			return ((char *)s);
 		i++;
 	}
-	return ((char *)dest);
+	return (0);
 }
 
 int	main()
 {
-	char	str[] = "ola tudo bem";
-	char	final[] = "vamos a praia";
+	char	str[] = "laranjas e bananas";
+	int		x = ft_memchr;
+	int		y = memchr;
 
 	printf("minha função\n");
-	printf("%s\n", final);
-	ft_memcpy(final, str, 6);
-	printf("%s\n", final);
+	ft_memchr(str, 'r', 5);
+	printf("%s\n", x);
 	printf("\n");
-/*
-	printf("função livraria\n");
-	printf("%s\n", final);
-	memcpy(final, str, 6);
-	printf("%s\n", final);
+	printf("função livraria");
+	memchr(str, 'r', 5);
+	printf("%s\n", y);
 	return (0);
-*/
 }
-
