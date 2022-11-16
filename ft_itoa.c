@@ -6,52 +6,76 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:57:12 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/15 14:03:00 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/16 11:39:04 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_nbr(int n, int x, char *str)
+char	*ft_string(int n, int i, char *str)
 {
-	if (n < 0)
+	size_t	nb;
+
+	nb = n;
+	while (i >= 0)
 	{
-		str[0] = '-';
-		n = n * -1;
-		x--;
-	}
-	if (n < 10)
-		str[x] = n + '0';
-	if (n > 9)
-	{
-		ft_nbr(n / 10, x, str);
-		x--;	
-		ft_nbr(n % 10, x, str);
-		x--;
+		if (n < 0)
+		{
+			str[0] = '-';
+			nb = nb * -1;
+		}
+		if (nb < 10)
+		{
+			str[i] = nb + '0';
+			break ;
+		}
+		if (nb > 9)
+		{
+			ft_string(nb % 10, i, str);
+			i--;
+			ft_string(nb / 10, i, str);
+			break ;
+		}
 	}
 	return (str);
+}
+
+int	ft_length(int n)
+{
+	int		i;
+	size_t	x;
+
+	i = 0;
+	x = n;
+	if (n < 0)
+	{
+		i++;
+		x = x * -1;
+	}
+	if (x == 0)
+		i = 1;
+	while (x > 0)
+	{
+		x = x / 10;
+		i++;
+	}
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
 	int		i;
-	int		x;
 	char	*str;
 
-	i = n;
-	x = 0;	
-	while (i > 0)
-	{
-		i = i / 10;
-		x++;
-	}
-	str = malloc(x * sizeof(char) + 1);
-	return (ft_nbr(n, x, str));
+	i = ft_length(n);
+	str = malloc(i * sizeof(char) + 1);
+	i = i - 1;
+	return (ft_string(n, i, str));
 }
 
 int	main(void)
 {
-//	printf("-----------\n");
-	printf("NUMERO- %s\n", ft_itoa(53));
-//	printf("-----------\n");
+	printf("-----------\n");
+	printf("NUMERO| %s\n", ft_itoa(2147448));
+	printf("-----------\n");
 }
