@@ -6,7 +6,7 @@
 #    By: maricard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 16:59:07 by maricard          #+#    #+#              #
-#    Updated: 2022/11/17 17:17:51 by maricard         ###   ########.fr        #
+#    Updated: 2022/11/17 17:22:40 by maricard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ BONUS =
 
 BONUS-OBJ = $(BONUS:.c=.o)
 
-.c=.o:		$(SRC)
+.c.o:		$(SRC)
 			$(CC) -c $(CCFLAGS) $(SRC)
 
 all:		$(NAME)
