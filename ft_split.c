@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:19:54 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/16 13:53:21 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/17 11:59:36 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	**ft_array(char const *s, char c)
 {
-	int	i;
-	int	a;
+	int		i;
+	int		a;
 	char	**str;
 
 	i = 0;
@@ -35,10 +35,10 @@ char	**ft_array(char const *s, char c)
 }	
 char	**ft_malloc(char const *s, char c)
 {
-	int	i;
-	int	a;
-	int	x;
-	int	z;
+	int		i;
+	int		a;
+	int		x;
+	int		z;
 	char	**str;
 
 	str = ft_array(s, c);
@@ -48,17 +48,19 @@ char	**ft_malloc(char const *s, char c)
 	z = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		while (s[i] == c)
 		{
-			if (s[i] != c)
-			{
-				str[x] = malloc((i-a) * sizeof(char) + 1);
-				ft_strlcpy(str[x], s + z, i - a);
-				x++;
-				z = z + i;
-			}
 			i++;
 			a++;
+			if (s[i] != c)
+			{
+				z = i - z;
+				str[x] = malloc(((z + 1) - a) * sizeof(char) + 1);
+				ft_strlcpy(str[x], s + z, z - a);
+				x++;
+				z = i;
+				a = 0;
+			}
 		}
 		i++;
 	}
@@ -69,13 +71,13 @@ char	**ft_malloc(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {	
 	return (ft_malloc(s, c));
-
 }	
 
 int	main()
 {
-	int	i = 0;
-	char	**string = ft_split("marioomarioomarioo", 'o');
+	int		i = 0;
+	char	**string = ft_split("maromariomario", 'o');
+
 	while (string && i < 3)
 	{
 		printf("%s\n", string[i]);
