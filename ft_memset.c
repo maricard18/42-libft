@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 13:46:08 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/11 14:43:42 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/18 18:31:36 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,34 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	char	*str;
 
-	i = 0;
-	while (((char *)s)[i] && n > i)
+	str = (char *)s;
+	while (n > 0)
 	{
-		((char *)s)[i] = c;
-		i++;
+		*str++ = (unsigned char)c;
+		n--;
 	}
-	return ((char *)s);
+	return (s);
 }
 
+/*
 int	main()
 {
-	char	str[] = "ola tudo bem";
+	char	a[] = "ola tudo bem";
+	char	b[] = "ola tudo bem";
+	char	c = 'A';
+	size_t	n = 4;
 
-    ft_memset(str, '2', 6);
-    printf("%c\n", str[5]);
-    return (0);
+	printf("\nMINHA FUNÇÃO\n");
+	printf("\n%s\n", a);
+	ft_memset(a, c, n);
+	printf("%s\n", a);
+	printf("\n---------------");
+	printf("\n---------------\n");
+	printf("\nFUNÇÃO LIVRARIA\n");
+	printf("\n%s\n", b);
+	memset(b ,c ,n);
+	printf("%s\n\n", b); 
 }
+*/

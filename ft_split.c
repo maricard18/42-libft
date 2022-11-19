@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:19:54 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/17 11:59:36 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:52:57 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ char	**ft_split(char const *s, char c)
 	return (ft_malloc(s, c));
 }	
 
+/*
 int	main()
 {
 	int		i = 0;
@@ -85,3 +86,4 @@ int	main()
 	}
 	return (0);
 }
+*/

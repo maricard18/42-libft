@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 09:41:46 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/12 10:11:22 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:18:47 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (0);
 }
 
+/*
 int	main()
 {
 	char	str[] = "laranjas e bananas";
@@ -41,3 +42,4 @@ int	main()
 	printf("%s\n", y);
 	return (0);
 }
+*/

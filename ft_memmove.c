@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:06:20 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/11 17:02:22 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:52:02 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,18 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return ((char *)dest);
 }
 
+/*
 int	main()
 {
 	char	str[] = "ola tudo bem";
 	char	final[] = "vamos a praia";
-/*
+
 	printf("minha função\n");
 	printf("%s\n", final);
 	ft_memmove(final, str, 6);
 	printf("%s\n", final);
 	printf("\n");
-*/
+
 	printf("função livraria\n");
 	printf("%s\n", final);
 	memmove(final, str, 6);
@@ -51,3 +52,4 @@ int	main()
 	return (0);
 
 }
+*/

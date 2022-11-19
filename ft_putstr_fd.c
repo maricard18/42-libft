@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:34:36 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/14 16:38:43 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:30:34 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ void	ft_putstr_fd(char *s, int fd)
 	}
 }
 
+/*
 int	main()
 {
-	ft_putstr_fd("mario", %&);
+	ft_putstr_fd("mario", 1);
 }
+*/

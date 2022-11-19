@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:06:19 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/14 11:24:11 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:53:33 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
+/*
 int	main()
 {
 	char	s1[] = "BOAS ";
@@ -54,4 +55,5 @@ int	main()
 	printf("FINAL- %s\n",ft_strjoin(s1, s2));
 	printf("---------------\n");
 	printf("\n");
-}	
+}
+*/	

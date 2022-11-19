@@ -6,7 +6,7 @@
 #    By: maricard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 16:59:07 by maricard          #+#    #+#              #
-#    Updated: 2022/11/17 17:22:40 by maricard         ###   ########.fr        #
+#    Updated: 2022/11/18 17:15:26 by maricard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ RM = rm -f
 
 CC = clang
 
-CCFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 
 SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcpy.c ft_memmove.c  \
@@ -32,7 +32,7 @@ BONUS =
 BONUS-OBJ = $(BONUS:.c=.o)
 
 .c.o:		$(SRC)
-			$(CC) -c $(CCFLAGS) $(SRC)
+			$(CC) -c $(CFLAGS) $(SRC)
 
 all:		$(NAME)
 		
@@ -51,3 +51,7 @@ fclean:		clean
 
 re:			fclean
 			$(NAME)
+
+so:
+			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) 
+			gcc -nostartfiles -shared -o libft.so $(SRC-OBJ)

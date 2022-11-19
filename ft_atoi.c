@@ -6,13 +6,13 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 11:59:52 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/10 18:21:25 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:17:36 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_whitespaces(char *str)
+int	ft_whitespaces(const char *str)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ int	ft_whitespaces(char *str)
 	return (i);
 }
 
-int	ft_signs(char *str, char *y)
+int	ft_signs(const char *str, char *y)
 {
 	int	i;
 	int	b;
@@ -62,9 +62,7 @@ int	ft_atoi(const char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] >= '0' && str[i] <= '9')
-		{
 			num = num * 10 + (str[i] - '0');
-		}
 		else
 			break ;
 		i++;

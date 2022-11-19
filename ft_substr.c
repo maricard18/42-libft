@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 08:21:07 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/14 11:02:40 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:54:03 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char	*ft_substr(char const *s, unsigned int start,size_t len)
 	return (str);
 }
 
+/*
+
 int	main()
 {
 	char	string[] = "ola tudo bem";
@@ -40,11 +42,12 @@ int	main()
 	printf("%s\n",ft_substr(string, 0, 3 ));
 	printf("---------------\n");
 	printf("\n");
-/*
+
 	printf("função livraria\n");
 	printf("%s\n", final);
 	memmove(final, str, 6);
 	printf("%s\n", final);
 	return (0);
-*/
+
 }
+*/

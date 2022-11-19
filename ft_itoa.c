@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:57:12 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/16 11:39:04 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:51:06 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,11 @@ char	*ft_itoa(int n)
 	return (ft_string(n, i, str));
 }
 
+/*
 int	main(void)
 {
 	printf("-----------\n");
 	printf("NUMERO| %s\n", ft_itoa(2147448));
 	printf("-----------\n");
 }
+*/

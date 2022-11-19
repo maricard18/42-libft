@@ -6,13 +6,13 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:25:37 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/14 12:25:55 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:46:54 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_remove(char const *s1, char const *set, char *str)
+char	*ft_remove(char const *s1, char const *set, char *str)
 {
 	int	n;
 	int	i;
@@ -33,7 +33,7 @@ char	ft_remove(char const *s1, char const *set, char *str)
 		str[i] = s1[i];
 		i++;
 	}
-	return (*str);
+	return (str);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -46,11 +46,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	a = ft_strlen(s1);
 	b = ft_strlen(set);
 	str = malloc((a - b + 1) * sizeof(char));
-	final = *ft_remove(s1, set, str);
+	final = ft_remove(s1, set, str);
 	return(final);
 
 }
 
+/*
 int	main()
 {
 	char	s1[] = "ola tudo bem";
@@ -65,3 +66,4 @@ int	main()
 	printf("---------------\n");
 	printf("\n");
 }
+*/
