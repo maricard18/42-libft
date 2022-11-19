@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:06:20 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/18 16:52:02 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/19 18:21:33 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,42 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
-	char	*temp;
 
 	i = 0;
-	temp = dest;
-	while (((char *)src)[i] != '\0' && n > i)
+	if (!src && !dest)
+		return (0);
+	if (src < dest)
 	{
-		temp[i] = ((char *)src)[i];
-		i++;
+		while (n > 0)
+		{
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			i++;
+			n--;
+		}
 	}
-	i = 0;
-	while (temp[i])
-	{
-		((char *)dest)[i] = temp[i];
-		i++;
-	}
-	return ((char *)dest);
+	else if (src > dest)
+		ft_memcpy(dest, src, n);
+	return (dest);
 }
 
 /*
-int	main()
+int    main()
 {
-	char	str[] = "ola tudo bem";
-	char	final[] = "vamos a praia";
+	char	src_a[] = "12345";
+	char	src_b[] = "12345";
+	char	dst_a[] = "abcde";
+	char	dst_b[] = "abcde";
+	size_t	n = 3;
 
-	printf("minha função\n");
-	printf("%s\n", final);
-	ft_memmove(final, str, 6);
-	printf("%s\n", final);
-	printf("\n");
-
-	printf("função livraria\n");
-	printf("%s\n", final);
-	memmove(final, str, 6);
-	printf("%s\n", final);
-	return (0);
-
+    printf("\nMINHA FUNÇÃO\n");
+    printf("\n%s\n", dst_a);
+    ft_memmove(dst_a, src_a, n);
+    printf("%s\n", dst_a);
+    printf("\n---------------");
+    printf("\n---------------\n");
+    printf("\nFUNÇÃO LIVRARIA\n");
+    printf("\n%s\n", dst_b);
+    memmove(dst_b ,src_b ,n);
+    printf("%s\n\n", dst_b);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 13:34:43 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/10 18:14:03 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/19 18:47:59 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,31 +17,38 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (s1[i] != '\0' && i < n)
+	if (n == 0)
+	{
+		return (0);
+	}
+	while (s1[i] && s2[i] && n - 1 > 0)
 	{
 		if (s1[i] != s2[i])
-			break ;
+		{
+			break;
+		}
 		i++;
+		n--;
 	}
-	if (n == 0)
-		return (0);
-	if (i == n)
-		i--;
-	return (s1[i] - s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 /*
-int	main()
+int    main()
 {
-	char	s1[] = "abcdef";
-	char	s2[] = "abce";
-	int	n = 0;
-	int	x;
+	char	s1[] = "12355";
+	char	s2[] = "12345";
+	size_t	n = 3;
 
-	x = ft_strncmp(s1, s2, n);
-	ft_strncmp(s1, s2, n);
-	printf("%d\n", x);
-	printf("%d\n", strncmp(s1, s2, n));
-	return 0;
+    printf("\nMINHA FUNÇÃO\n");
+    printf("\n%s\n", s1);
+    printf("%s\n", s2);
+	printf("%d\n", ft_strncmp(s1, s2, n));
+    printf("\n---------------");
+    printf("\n---------------\n");
+    printf("\nFUNÇÃO LIVRARIA\n");
+    printf("\n%s\n", s1);
+    printf("%s\n", s2);
+	printf("%d\n\n", strncmp(s1, s2, n));
 }
 */

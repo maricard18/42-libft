@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 09:41:46 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/18 16:18:47 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/19 12:36:45 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,35 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*str;
 
 	i = 0;
-	while ((unsigned char *)s && i < n)
+	str = (unsigned char *)s;
+	while ( str[i] && n > 0)
 	{
-		if (((unsigned char *)s)[i] == c)
-			return ((char *)s);
+		if (str[i] == (unsigned char)c)
+			return (str + i);
 		i++;
+		n--;
 	}
 	return (0);
 }
 
 /*
-int	main()
+int    main()
 {
-	char	str[] = "laranjas e bananas";
-	int		x = ft_memchr;
-	int		y = memchr;
+	char	str[] = "mario";
+	int		a = 'r';
+	size_t	n = 5;
 
-	printf("minha função\n");
-	ft_memchr(str, 'r', 5);
-	printf("%s\n", x);
-	printf("\n");
-	printf("função livraria");
-	memchr(str, 'r', 5);
-	printf("%s\n", y);
-	return (0);
+	char 	*final;
+	final = ft_memchr(str, a, n);
+
+    printf("\nMINHA FUNÇÃO\n");
+    printf("\n%s\n", str);
+    printf("%s\n", final);
+    printf("\n---------------");
+    printf("\n---------------\n");
 }
 */

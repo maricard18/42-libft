@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:43:37 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/18 16:29:08 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/19 18:28:02 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,39 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	length_dst = ft_strlen(dst);
 	length_src = ft_strlen(src);
-	if (size <= length_dst)
+	if (size == 0)
+		return (length_src);
+	if (length_dst > size)
 	{
 		return (length_src + size);
 	}
-	while (src[i] != '\0' && i < (size - length_dst - 1))
+	while (src[i] && i < (size - length_dst - 1))
 	{
 		dst[length_dst + i] = src[i];
 		i++;
 	}
 	dst[length_dst + i] = '\0';
-	return (length_dst + length_src);
+	return (ft_strlen(dst));
 }
 
 /*
-int	main()
+int    main()
 {
 	char	src[] = "henriques";
-	char	dest[20] = "mario";
-	unsigned int	size = 8;
-	
-	int x = ft_strlcat(dest, src, size);
-	printf("%s", dest);
-	printf("\n%d", x);
-	return 0;
+	char	dst[] = "mario";
+	char	src_a[] = "henriques";
+	char	dst_a[] = "mario";
+	size_t	n = 20;
+
+    printf("\nMINHA FUNÇÃO\n");
+    printf("\n%s\n", dst);
+    ft_strlcat(dst, src, n);
+    printf("%s\n", dst);
+    printf("\n---------------");
+    printf("\n---------------\n");
+    printf("\nFUNÇÃO LIVRARIA\n");
+    printf("\n%s\n", dst_a);
+    strlcat(dst_a, src_a, n);
+    printf("%s\n\n", dst_a);
 }
 */

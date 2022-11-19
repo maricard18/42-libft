@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 10:23:12 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/18 16:53:17 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/19 18:37:03 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	*ft_strdup(const char *s)
 		str[i] = s[i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
 
