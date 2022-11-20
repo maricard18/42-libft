@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:06:20 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/19 18:21:33 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/20 11:36:54 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	}
 	else if (src > dest)
+	{
 		ft_memcpy(dest, src, n);
+	}
 	return (dest);
 }
 

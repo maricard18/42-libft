@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:37:59 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/19 19:13:35 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/20 09:46:58 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char	*ft_strdup(const char *s);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strrchr(const char	*s, int	c);
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
@@ -50,7 +51,7 @@ void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
-int		memcmp(const void *b1, const void *b2, size_t len);
+int		ft_memcmp(const void *b1, const void *b2, size_t len);
 
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);

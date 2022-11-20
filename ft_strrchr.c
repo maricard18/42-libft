@@ -1,48 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 09:41:46 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/20 11:38:23 by maricard         ###   ########.fr       */
+/*   Created: 2022/11/20 09:45:54 by maricard          #+#    #+#             */
+/*   Updated: 2022/11/20 11:28:16 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strrchr(const char	*s, int	c)
 {
-	size_t			i;
-	unsigned char	*str;
+	int	i;
+	int	a;
 
 	i = 0;
-	str = (unsigned char *)s;
-	while (n > 0)
+	a = 0;
+	if ((unsigned char)c == '\0')
 	{
-		if (str[i] == (unsigned char)c)
-			return (str + i);
-		i++;
-		n--;
+		return ((char *)&s[ft_strlen(s)]);
 	}
+	while (s[i] != '\0')
+	{
+		if (s[i] == (unsigned char)c)
+			a = i;
+		i++;
+	}
+	if (a >= 1)
+		return ((char *)&s[a]);
 	return (0);
 }
 
 /*
 int    main()
 {
-	char	str[] = "mario";
-	int		a = 'r';
-	size_t	n = 5;
-
-	char 	*final;
-	final = ft_memchr(str, a, n);
+	char			s[] = "ola ola ola ola ola tudo bem";
+	unsigned char	c = 'o';
 
     printf("\nMINHA FUNÇÃO\n");
-    printf("\n%s\n", str);
-    printf("%s\n", final);
+    printf("\n%s\n", s);
+    printf("%s\n", ft_strrchr(s, c));
     printf("\n---------------");
     printf("\n---------------\n");
+    printf("\nFUNÇÃO LIVRARIA\n");
+    printf("\n%s\n", s);
+    printf("%s\n\n", strrchr(s, c));
 }
 */

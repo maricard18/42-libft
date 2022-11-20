@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 10:11:05 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/18 16:48:40 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/20 11:54:47 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,36 +23,35 @@ char	*ft_strnstr(const char *big, const char *little, size_t size)
 	while (big[i] != '\0')
 	{
 		a = 0;
-		if (big[i] == little[0])
+		if (big[i] == little[a])
 		{
-			while (little[a] && little[a] == big[i + a] && 
-													i + a > size)
+			while (big[i] == little[a] && i > size)
+			{
+				if (little[a] == '\0')
+				{
+					return ((char *)&big[i]);
+				}
 				a++;
-			if (little[a] == '\0')
-				return ((char *)&big[i]);
+				i++;
+			}
 		}
 		i++;
 	}
 	return (0);
 }
 
-/*
-int main()
+int    main()
 {
-	printf("minha função\n");
-	printf("%s\n", ft_strnstr("ola tudo bem", "tudo", 10));
-//	printf("%d\n", ft_tolower(23));
-//	printf("%d\n", ft_tolower('a'));
-//	printf("%d\n", ft_tolower('V'));
-//	printf("%d\n", ft_tolower('$'));
-//	printf("%d\n", ft_tolower(0));
-	printf("\n");
-	printf("função livraria\n");
-	printf("%s\n", strnstr("ola tudo bem", "tudo", 10));
-//	printf("%d\n", tolower(23));
-//	printf("%d\n", tolower('a'));
-//	printf("%d\n", tolower('V'));
-//	printf("%d\n", tolower('$'));
-//	printf("%d\n", tolower(0));
+	char	big[] = "ola tudo bem";
+	char	little[] = "tudo";
+	size_t	n = 10;
+
+	printf("\nMINHA FUNÇÃO\n");
+	printf("\n%s\n", big);
+	printf("%s\n", ft_strnstr(big, little, n));
+	printf("\n---------------");
+	printf("\n---------------\n");
+	printf("\nFUNÇÃO LIVRARIA\n");
+	printf("\n%s\n", big);
+	printf("%s\n", strnstr(big, little, n));
 }
-*/
