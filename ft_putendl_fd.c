@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:39:38 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/18 16:19:30 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/21 19:42:45 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	int i;
 
 	i = 0;
+	if (!s || fd < 0)
+		return ;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);

@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:25:37 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/18 16:46:54 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/21 17:08:21 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,48 +14,71 @@
 
 char	*ft_remove(char const *s1, char const *set, char *str)
 {
-	int	n;
 	int	i;
+	int	a;
+	int	z;
 
-	n = 0;
 	i = 0;
+	z = 0;
 	while (s1[i])
 	{
-		while (set[n])
+		a = 0;
+		while (set[a])
 		{
-			if (s1[i] == set[n])
+			if (s1[i] == set[a])
 			{
 				i++;
-				n++;
+				a = 0;
 			}
-			n++;
+			a++;
 		}
-		str[i] = s1[i];
+		str[z] = s1[i];
+		i++;
+		z++;
+	}
+	str[i] = '\0';
+	return (str);
+
+}
+
+int	ft_counter(char const *s1, char const *set)
+{
+	int	i;
+	int	a;
+	int	z;
+
+	i = 0;
+	z = 0;
+	while (s1[i])
+	{
+		a = 0;
+		while (set[a])
+		{
+			if (s1[i] == set[a])
+				z++;
+			a++;
+		}
 		i++;
 	}
-	return (str);
+	return (z);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		a;
-	int		b;
 	char	*str;
 	char	*final;
 
 	a = ft_strlen(s1);
-	b = ft_strlen(set);
-	str = malloc((a - b + 1) * sizeof(char));
+	str = malloc((a - ft_counter(s1, set)) * sizeof(char) + 1);
 	final = ft_remove(s1, set, str);
 	return(final);
-
 }
 
-/*
 int	main()
 {
-	char	s1[] = "ola tudo bem";
-	char	set[] = "ola";
+	char	s1[] = "ol1atu132d2obe1m";
+	char	set[] = "123";
 
 	printf("\n");
 	printf("MINHA FUNÇÃO\n");
@@ -66,4 +89,3 @@ int	main()
 	printf("---------------\n");
 	printf("\n");
 }
-*/

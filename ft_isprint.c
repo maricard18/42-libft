@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:20:04 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/10 17:54:11 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/22 08:08:09 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_isprint(int x)
 	return (0);
 }
 
-/*
 int	main()
 {
 	printf("minha função\n");
@@ -37,5 +36,5 @@ int	main()
 	printf("%d\n", isprint('V'));
 	printf("%d\n", isprint('$'));
 	printf("%d\n", isprint(0));
+
 }
-*/

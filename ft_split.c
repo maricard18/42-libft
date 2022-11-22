@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:19:54 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/18 16:52:57 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/21 18:59:47 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,34 +37,26 @@ char	**ft_malloc(char const *s, char c)
 {
 	int		i;
 	int		a;
-	int		x;
-	int		z;
 	char	**str;
 
 	str = ft_array(s, c);
 	i = 0;
 	a = 0;
-	x = 0;
-	z = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
+		if (s[i] == c)
 		{
-			i++;
-			a++;
-			if (s[i] != c)
+			a = 0;
+			while (s[i] == c)
 			{
-				z = i - z;
-				str[x] = malloc(((z + 1) - a) * sizeof(char) + 1);
-				ft_strlcpy(str[x], s + z, z - a);
-				x++;
-				z = i;
-				a = 0;
-			}
-		}
-		i++;
+				if (s[i] != c)
+				{
+					str = malloc((i - a) * sizeof(char) + 1);
+				}
+			}		
+		}			
 	}
-	str[x] = 0;
+	str[i] = 0;
 	return (str);
 }
 
@@ -77,7 +69,7 @@ char	**ft_split(char const *s, char c)
 int	main()
 {
 	int		i = 0;
-	char	**string = ft_split("maromariomario", 'o');
+	char	**string = ft_split("marioxmarioxxxmarioxmario", 'x');
 
 	while (string && i < 3)
 	{
