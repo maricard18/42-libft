@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:37:59 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/22 11:01:45 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/22 16:35:03 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 
 // Struct
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-} 				t_list;
+}					t_list;
 
 // Function Prototypes Part I
 

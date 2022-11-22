@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:57:12 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/19 18:58:53 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/22 11:30:21 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ char	*ft_itoa(int n)
 
 	i = ft_length(n);
 	str = malloc(i * sizeof(char) + 1);
+	if (!str)
+		return (0);
 	str[i] = '\0';
 	i = i - 1;
 	return (ft_string(n, i, str));

@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 08:21:07 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/22 10:48:23 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/22 12:04:10 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	i = 0;
+	if (!s)
+		return (0);
+	if (start > ft_strlen(s))
+	{
+		str = malloc(1 * sizeof(char));
+		if (!str)
+			return (0);
+		str[0] = '\0';
+		return (str);
+	}
 	str = malloc((len + 1) * sizeof(char));
-	if (s == 0)
+	if (!str)
 		return (0);
 	while (s[i] && i < len)
 	{
@@ -31,23 +41,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 
 /*
-
 int	main()
 {
-	char	string[] = "ola tudo bem";
+	char			string[] = "ola tudo bem";
+	unsigned int	i = 3;
+	size_t			len = 7;
 
 	printf("\n");
 	printf("MINHA FUNÇÃO\n");
 	printf("---------------\n");
 	printf("%s\n", string);
-	printf("%s\n",ft_substr(string, 0, 3 ));
+	printf("%s\n",ft_substr(string, i, len ));
 	printf("---------------\n");
 	printf("\n");
-
-	printf("função livraria\n");
-	printf("%s\n", final);
-	memmove(final, str, 6);
-	printf("%s\n", final);
 	return (0);
 
 }

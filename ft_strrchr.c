@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 09:45:54 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/22 10:46:43 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/22 15:00:38 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,16 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		return ((char *)&s[ft_strlen(s)]);
 	}
+	if (s[i] == '\0')
+		return (0);
 	while (s[i] != '\0')
 	{
 		if (s[i] == (unsigned char)c)
-			a = i;
+			a = i + 1;
 		i++;
 	}
 	if (a >= 1)
-		return ((char *)&s[a]);
+		return ((char *)&s[a - 1]);
 	return (0);
 }
 
