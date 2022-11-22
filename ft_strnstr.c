@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 10:11:05 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/21 19:04:10 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/22 10:46:15 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t size)
 	if (little[0] == '\0')
 		return ((char *)big);
 	i = 0;
-	
 	while (big[i] != '\0' && i < size)
 	{
 		a = 0;
@@ -32,7 +31,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t size)
 				i++;
 			}
 			if (little[a] == '\0')
-				return((char *)&big[i - a]);
+				return ((char *)&big[i - a]);
 		}
 		i++;
 	}

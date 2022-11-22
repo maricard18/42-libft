@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:25:37 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/21 17:08:21 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/22 10:47:09 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ char	*ft_remove(char const *s1, char const *set, char *str)
 	}
 	str[i] = '\0';
 	return (str);
-
 }
 
 int	ft_counter(char const *s1, char const *set)
@@ -72,9 +71,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	a = ft_strlen(s1);
 	str = malloc((a - ft_counter(s1, set)) * sizeof(char) + 1);
 	final = ft_remove(s1, set, str);
-	return(final);
+	return (final);
 }
 
+/*
 int	main()
 {
 	char	s1[] = "ol1atu132d2obe1m";
@@ -89,3 +89,4 @@ int	main()
 	printf("---------------\n");
 	printf("\n");
 }
+*/

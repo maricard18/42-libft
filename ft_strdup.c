@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 10:23:12 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/19 18:37:03 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/22 10:43:04 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *s)
 {
-	int	i;
-	int	n;
-	char *str;
+	int		i;
+	int		n;
+	char	*str;
 
 	i = 0;
 	while (s[i])

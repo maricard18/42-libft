@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 13:34:43 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/19 18:47:59 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/22 10:45:40 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (s1[i] != s2[i])
 		{
-			break;
+			break ;
 		}
 		i++;
 		n--;

@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:43:12 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/19 18:55:33 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/22 10:42:37 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_write('-', fd);
 		nb = nb * -1;
 	}
-	if (nb < 10 )
+	if (nb < 10)
 		ft_write(nb + '0', fd);
 	else
 	{

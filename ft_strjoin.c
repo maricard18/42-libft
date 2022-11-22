@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:06:19 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/20 09:22:24 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/22 10:44:57 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	a = 0;
 	while (s1[i])
-	{
-		str[a] = s1[i];
-		i++;
-		a++;
-	}
+		str[a++] = s1[i++];
 	i = 0;
 	while (s2[i])
-	{
-		str[a] = s2[i];
-		i++;
-		a++;
-	}
+		str[a++] = s2[i++];
 	str[a] = '\0';
 	return (str);
 }
