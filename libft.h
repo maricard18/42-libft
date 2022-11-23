@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:37:59 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/22 16:35:03 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/23 14:55:03 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 char	**ft_split(char const *s, char c);
+char	**ft_split2(char const *s, char c);
 
 char	*ft_itoa(int n);
 

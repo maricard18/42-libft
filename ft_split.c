@@ -6,16 +6,16 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:19:54 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/22 15:49:29 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/23 12:39:30 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_malloc(char const *s, char **str, int i, int x)
+char	**ft_malloc(char const *s, char **str, int i, int x, int k)
 {
 	str[x] = malloc(i * sizeof(char) + 1);
-	ft_strlcpy(str[x], s, i + 1);
+	ft_strlcpy(str[x], s, (i + 1) - k);
 	return (str);
 }
 
@@ -37,10 +37,9 @@ char	**ft_copy(char const *s, char c, char **str)
 			a++;
 			if (s[i + 1] != c)
 			{
-
-				ft_malloc(s + k, str, i - a, x);
+				ft_malloc(s + k, str, (i + 1) - a, x, k);
 				x++;
-				k = i + a;
+				k = i + 1;
 			}
 			i++;
 		}
@@ -76,7 +75,7 @@ char	**ft_split(char const *s, char c)
 int	main()
 {
 	int		i = 0;
-	char	**string = ft_split("marioxmarioxxxmarioxmario", 'x');
+	char	**string = ft_split("marioxmarigfdoxxmario", 'x');
 
 	while (string[i])
 	{
