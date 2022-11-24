@@ -6,7 +6,7 @@
 #    By: maricard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 16:59:07 by maricard          #+#    #+#              #
-#    Updated: 2022/11/20 09:47:19 by maricard         ###   ########.fr        #
+#    Updated: 2022/11/24 10:00:35 by maricard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ ft_substr.c ft_tolower.c ft_toupper.c ft_memcmp.c ft_strrchr.c
 
 SRC-OBJ = $(SRC:.c=.o)
 
-BONUS = 
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 BONUS-OBJ = $(BONUS:.c=.o)
 
