@@ -6,7 +6,7 @@
 #    By: maricard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 16:59:07 by maricard          #+#    #+#              #
-#    Updated: 2022/11/24 10:00:35 by maricard         ###   ########.fr        #
+#    Updated: 2022/11/24 18:43:06 by maricard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,13 +27,13 @@ ft_substr.c ft_tolower.c ft_toupper.c ft_memcmp.c ft_strrchr.c
 
 SRC-OBJ = $(SRC:.c=.o)
 
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+BONUS = #ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 BONUS-OBJ = $(BONUS:.c=.o)
 
-.c.o:		$(SRC)
-			$(CC) -c $(CFLAGS) $(SRC)
+%.o:		%.c
+			$(CC) -c $(CFLAGS) $^
 
 all:		$(NAME)
 		
@@ -54,5 +54,5 @@ re:			fclean
 			$(NAME)
 
 so:
-			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) 
-			gcc -nostartfiles -shared -o libft.so $(SRC-OBJ)
+			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS)
+			gcc -nostartfiles -shared -o libft.so $(SRC-OBJ) $(BONUS-OBJ)

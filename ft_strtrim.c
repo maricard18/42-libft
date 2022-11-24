@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:25:37 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/22 16:33:09 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/24 19:22:34 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	a = ft_strlen(s1) - 1;
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
-	while (s1[a] && ft_strchr(set, s1[a]))
+	while (a >= i && ft_strchr(set, s1[a]))
 		a--;
 	return (ft_substr(s1, i, (a + 1) - i));
 }

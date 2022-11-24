@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 16:07:09 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/22 16:31:31 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/24 15:28:52 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next=*lst;
+	new->next = *lst;
+	*lst = new;
 }
