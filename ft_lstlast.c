@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:12:46 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/24 15:44:27 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/25 08:56:25 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	i = 0;
-	while (lst != NULL)
+	if (lst != NULL)
 	{
-		lst = lst->next;
-		i++;
+		while (lst->next != NULL)
+			lst = lst->next;
 	}
-	lst = lst - 1;
+	else
+		return (NULL);
 	return (lst);
 }
