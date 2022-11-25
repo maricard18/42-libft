@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:06:19 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/23 11:25:31 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/25 10:33:41 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		a;
 	char	*str;
 
+	if (!s1)
+		return (0);
 	i = ft_strlen(s1);
 	a = ft_strlen(s2);
-	if (!s1 && !s2)
-		return (0);
 	str = malloc((a + i) * sizeof(char) + 1);
 	if (!str)
 		return (0);

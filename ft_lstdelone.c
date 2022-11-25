@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 08:38:44 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/25 09:00:21 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/25 09:55:22 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	
+	if (!del)
+		return ;
+	if (lst != NULL)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

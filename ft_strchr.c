@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 10:56:52 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/20 09:48:46 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/25 10:55:21 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,15 @@ char	*ft_strchr(const char *s, int c)
 /*
 int main()
 {
-	printf("minha função\n");
-	printf("%s\n", ft_strchr("ola", 'l'));
-//	printf("%d\n", ft_strchr(23));
-//	printf("%d\n", ft_strchr('a'));
-//	printf("%d\n", ft_strchr('V'));
-//	printf("%d\n", ft_strchr('$'));
-//	printf("%d\n", ft_strchr(0));
+	char	str[] = "ola tudo bem";
+	int		c = 'a';
+
+	printf("\nSTRING- %s\nCHAR- %c\n", str, c);
+	printf("\n-------------\n");
+	printf("\nMINHA FUNCAO\n");
+	printf("%s\n", ft_strchr(str, c));
 	printf("\n");
-	printf("função livraria\n");
-	printf("%s\n", strchr("ola", 'l'));
-//	printf("%d\n", strchr(23));
-//	printf("%d\n", strchr('a'));
-//	printf("%d\n", strcrr('V'));
-//	printf("%d\n", strchr('$'));
-//	printf("%d\n", strchr(0));
+	printf("FUNCAO LIVRARIA\n");
+	printf("%s\n", strchr(str, c));
 }
 */

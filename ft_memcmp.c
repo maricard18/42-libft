@@ -6,11 +6,12 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 19:12:06 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/22 10:41:15 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/25 10:47:59 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 int	ft_memcmp(const void *b1, const void *b2, size_t len)
 {
@@ -30,3 +31,18 @@ int	ft_memcmp(const void *b1, const void *b2, size_t len)
 	}
 	return (0);
 }
+
+/*
+int    main()
+{
+	char	b1[] = "123456";
+	char	b2[] = "123a56";
+	size_t	n = 5;
+	printf("\nMINHA FUNÇÃO\n");
+	printf("\nstring 1 -%s\n", b1);
+	printf("string 2 -%s\n", b2);
+	printf("\n%i\n", ft_memcmp(b2, b1, n));
+	printf("\n---------------");
+	printf("\n---------------\n");
+}
+*/

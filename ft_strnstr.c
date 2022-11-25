@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 10:11:05 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/22 15:21:45 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/25 10:58:31 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,11 @@ int    main()
 	char	little[] = "A";
 	size_t	n = 2;
 
-//	printf("\nMINHA FUNÇÃO\n");
-//	printf("\nB- %s", big);
-//	printf("\nL- %s\n", little);
+	printf("\nMINHA FUNÇÃO\n");
+	printf("\nB- %s", big);
+	printf("\nL- %s\n", little);
 	printf("\n%s\n", ft_strnstr(big, little, n));
 	printf("\n---------------");
 	printf("\n---------------\n");
-	printf("\nFUNÇÃO LIVRARIA\n");
-	printf("\nB- %s", big);
-	printf("\nL- %s\n", little);
-//	printf("\n%s\n", strnstr(big, little, n));
-	printf("\n");
 }
 */

@@ -6,12 +6,11 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:21:40 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/24 19:09:41 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:11:35 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_getwordcount(const char *s, char c)
 {
@@ -84,14 +83,14 @@ char	**ft_split(char const *s, char c)
 	return (str);
 }
 
+/*
 int	main(void)
 {
-	char	**strarr = ft_split("\0aa\0bbb", '\0');
+	char	**strarr = ft_split("ola o meu nome is mario", ' ');
 	int	i = 0;
 	while (strarr[i])
 	{
 		printf("%s\n", strarr[i++]);
-	//	free(strarr[i++]);
 	}
-//	free(strarr);
 }
+*/

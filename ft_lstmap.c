@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 16:07:09 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/25 10:24:41 by maricard         ###   ########.fr       */
+/*   Created: 2022/11/25 10:09:56 by maricard          #+#    #+#             */
+/*   Updated: 2022/11/25 10:19:21 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (new == NULL)
-		return ;
-	new->next = *lst;
-	*lst = new;
+	t_list	*new;
+
+	if (!lst || !f || !del)
+		return (0);
+	new = ft_lstiter(lst, lst->content);
+	ft_lstclear(new, lst);
+	return (new);
 }
