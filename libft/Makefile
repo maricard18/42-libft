@@ -6,7 +6,7 @@
 #    By: maricard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 16:59:07 by maricard          #+#    #+#              #
-#    Updated: 2022/11/25 10:23:52 by maricard         ###   ########.fr        #
+#    Updated: 2022/11/25 17:55:57 by maricard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ ft_substr.c ft_tolower.c ft_toupper.c ft_memcmp.c ft_strrchr.c
 SRC-OBJ = $(SRC:.c=.o)
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-ft_lstadd_back.c ft_lstdelone.c ft_lstiter.c #ft_lstclear.c ft_lstmap.c 
+ft_lstadd_back.c ft_lstdelone.c ft_lstiter.c ft_lstclear.c ft_lstmap.c 
 
 BONUS-OBJ = $(BONUS:.c=.o)
 
@@ -50,8 +50,7 @@ clean:
 fclean:		clean
 			$(RM) $(NAME)
 
-re:			fclean
-			$(NAME)
+re:			fclean $(NAME)
 
 so:
 			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS)

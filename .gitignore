@@ -1,3 +1,10 @@
 a.out
-*.o
+bonus
+**/*.o
+**/*.so
 *.gch
+42-tool
+extras
+libftTester
+libft-unit-test
+libft-war-machine

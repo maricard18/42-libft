@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:43:37 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/22 15:10:22 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/25 18:46:47 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 /*
 int    main()
 {
-	char	src[] = "henriques";
-	char	dst[] = "mario";
-	char	src_a[] = "henriques";
-	char	dst_a[] = "mario";
-	size_t	n = 20;
+	char	src[10] = "a";
+	char	dst[] = "lorem ipsum dolor sit amet";
+	size_t	n = 1;
 
     printf("\nMINHA FUNÇÃO\n");
     printf("\n%s\n", dst);
@@ -51,9 +49,5 @@ int    main()
     printf("%s\n", dst);
     printf("\n---------------");
     printf("\n---------------\n");
-    printf("\nFUNÇÃO LIVRARIA\n");
-    printf("\n%s\n", dst_a);
-    strlcat(dst_a, src_a, n);
-    printf("%s\n\n", dst_a);
 }
 */

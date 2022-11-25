@@ -6,13 +6,13 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:57:12 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/22 11:30:21 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/25 16:35:54 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_string(int n, int i, char *str)
+static char	*ft_string(int n, int i, char *str)
 {
 	size_t	nb;
 
@@ -40,7 +40,7 @@ char	*ft_string(int n, int i, char *str)
 	return (str);
 }
 
-int	ft_length(int n)
+static int	ft_length(int n)
 {
 	int		i;
 	size_t	x;
