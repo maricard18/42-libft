@@ -19,7 +19,7 @@ The goal was to create a library which would include C functions.<br />
 `cc -Wall -Wextra -Werror main.c libft.a` <br />
 5- And enjoy :)<br />
 
-##Testing:
+## Testing:
 To tested if everyting was woring fine i ran two testers, wich results are posted below:<br />
 
 #### [libft-war-machine](https://github.com/0x050f/libft-war-machine) <br />
