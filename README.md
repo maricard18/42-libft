@@ -16,5 +16,6 @@ The goal was to create a library which would include C functions.<br />
 3 - You can run `make clean` to remove object files that are no longer needed.<br />
 `make clean` <br />
 4- Compile your main.c with your new libft.a <br />
-`cc -Wall -Wextra -Werror main.c libft.a`
-5- And enjoy :)<pre>
+`cc -Wall -Wextra -Werror main.c libft.a` <br />
+5- And enjoy :)<br />
+<pre>
