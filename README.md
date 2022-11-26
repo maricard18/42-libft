@@ -21,5 +21,5 @@ The goal was to create a library which would include C functions.<br />
 4- Compile your main.c with your new libft.a <br />
 `cc -Wall -Wextra -Werror main.c libft.a`
 
-5- And enjoy :) <br />
+5- And enjoy :)
 <pre>
