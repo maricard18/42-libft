@@ -11,19 +11,10 @@ The goal was to create a library which would include C functions.<br />
 <pre>
 1 - Clone the repository:<br />
 ` git clone https://github.com/maricard18/42_lvl0_libft.git`
-<pre>
-<pre>
 2 - Navigate to the libft folder and run `make`<br />
 `make`<br />
-<pre>
-<pre>
 3 - You can run `make clean` to remove object files that are no longer needed.<br />
 `make clean` <br />
-<pre>
-<pre>
 4- Compile your main.c with your new libft.a <br />
 `cc -Wall -Wextra -Werror main.c libft.a`
-<pre>
-<pre>
-5- And enjoy :)
-<pre>
+5- And enjoy :)<pre>
