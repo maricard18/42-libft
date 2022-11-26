@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:21:40 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/25 19:01:05 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/26 15:07:24 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	str = malloc(ft_getwordcount(s, c) * (sizeof(char *) + 1));
+	str = malloc((ft_getwordcount(s, c) + 1) * sizeof(char *));
 	if (!str)
 		return (0);
 	ft_copy(s, c, str);
@@ -86,7 +86,7 @@ char	**ft_split(char const *s, char c)
 /*
 int	main(void)
 {
-	char	**strarr = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'z');
+	char	**strarr = ft_split("", 'z');
 	int	i = 0;
 	while (strarr[i])
 	{

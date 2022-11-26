@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:43:37 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/26 10:16:31 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/26 15:34:01 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	length_src = ft_strlen(src);
-	if (!size)
-		return (0);
 	length_dst = ft_strlen(dst);
-	if (size < length_dst)
+	if (size <= length_dst)
 	{
 		return (length_src + size);
 	}
