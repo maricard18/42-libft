@@ -8,7 +8,7 @@ This repository includes all the functions from the libft project from 42 Common
 The goal was to create a library which would include C functions.<br />
 
 ### To run the project
-<pre>
+
 1 - Clone the repository:<br />
 ` git clone https://github.com/maricard18/42_lvl0_libft.git`
 2 - Navigate to the libft folder and run `make`<br />
@@ -18,7 +18,6 @@ The goal was to create a library which would include C functions.<br />
 4- Compile your main.c with your new libft.a <br />
 `cc -Wall -Wextra -Werror main.c libft.a` <br />
 5- And enjoy :)<br />
-<pre>
 
 ##Testing:
 To tested if everyting was woring fine i ran two testers, wich results are posted below:<br />
