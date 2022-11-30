@@ -6,7 +6,7 @@
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 10:11:05 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/25 10:58:31 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/30 12:44:05 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t size)
 		a = 0;
 		if (big[i] == little[a])
 		{
-			while (big[i] && big[i] == little[a] && i < size)
+			while (big[i] && little[a] && big[i] == little[a] && i < size)
 			{
 				a++;
 				i++;
@@ -43,9 +43,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t size)
 /*
 int    main()
 {
-	char	big[] = "A";
-	char	little[] = "A";
-	size_t	n = 2;
+	char	big[] = "ba bar";
+	char	little[] = "bar";
+	size_t	n = 25;
 
 	printf("\nMINHA FUNÇÃO\n");
 	printf("\nB- %s", big);
