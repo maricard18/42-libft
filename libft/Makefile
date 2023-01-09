@@ -6,7 +6,7 @@
 #    By: maricard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 16:59:07 by maricard          #+#    #+#              #
-#    Updated: 2022/11/25 17:55:57 by maricard         ###   ########.fr        #
+#    Updated: 2023/01/09 19:22:16 by maricard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 RM = rm -f
 
-CC = clang
+CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
 
@@ -31,9 +31,6 @@ BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 ft_lstadd_back.c ft_lstdelone.c ft_lstiter.c ft_lstclear.c ft_lstmap.c 
 
 BONUS-OBJ = $(BONUS:.c=.o)
-
-%.o:		%.c
-			$(CC) -c $(CFLAGS) $^
 
 all:		$(NAME)
 		
