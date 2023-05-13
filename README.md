@@ -1,6 +1,6 @@
-![logo]
-
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+<p align="center">
+    <img src="https://github.com/maricard18/42-libft/blob/main/extras/libft.jpg" alt="libft">
+</p>
 
 ## Key Features
 
