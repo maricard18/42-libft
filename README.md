@@ -7,7 +7,8 @@
 
 This project is about coding our own C library. <br>
 It's a very useful tool in future projects and has been updated with more functions than asked in the primary subject. <br>
-This project is in rank 0 of 42 common core and had passed with the score of 125.
+This project is in rank 0 of 42 common core and had passed with the score of 125.<br>
+[-> Subject here](https://github.com/maricard18/42-printf/blob/main/extras/en.subject.pdf)
 
 
 ## How To Use
