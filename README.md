@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://github.com/maricard18/42-libft/extras/libft.png"><img alt="libft" width="200"></a>
+  <a href="https://github.com/maricard18/42-libft/blob/main/extras/libft.png"><img alt="libft" width="200"></a>
   <br>
   Markdownify
   <br>
