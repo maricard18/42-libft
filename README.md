@@ -1,63 +1,45 @@
-![logo]
+<p align="center">
+    <img src="https://github.com/maricard18/42-libft/blob/main/extras/libft.png" alt="libft">
+</p>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
 
-## Key Features
+## Your very first own library
 
-* LivePreview - Make changes, See changes
-  - Instantly see what your Markdown documents look like in HTML as you create them.
-* Sync Scrolling
-  - While you type, LivePreview will automatically scroll to the current location you're editing.
-* GitHub Flavored Markdown  
-* Syntax highlighting
-* [KaTeX](https://khan.github.io/KaTeX/) Support
-* Dark/Light mode
-* Toolbar for basic Markdown formatting
-* Supports multiple cursors
-* Save the Markdown preview as PDF
-* Emoji support in preview :tada:
-* App will keep alive in tray for quick usage
-* Full screen mode
-  - Write distraction free.
-* Cross platform
-  - Windows, macOS and Linux ready.
+This project is about coding our own C library. <br>
+It's a very useful tool in future projects and has been updated with more functions than asked in the primary subject. <br>
+This project is in rank 0 of 42 common core and had passed with the score of 125.
+
 
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this project, just follow this instructions
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/amitmerchant1990/electron-markdownify
+$ git clone https://github.com/maricard18/42-libft
 
 # Go into the repository
-$ cd electron-markdownify
+$ cd libft
 
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
+# Run make command
+$ make
 ```
 
 > **Note**
-> If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+> this project is only useful when used with porpuse. So if you want to get the most of it you will need to build a main function.
 
 
 ## Credits
 
-This software uses the following open source packages:
+This README uses the following packages
 
 - [Flaming Text](https://www10.flamingtext.com)
-- [Read.me Template](https://www.readme-templates.com)
 
-## Special thanks to
 
-- [42 Porto](https://www.42porto.com/en)
+### Special thanks - [42 Porto](https://www.42porto.com/en)
 
 ---
 
-> [amitmerchant.com](https://www.amitmerchant.com) &nbsp;&middot;&nbsp;
-> GitHub [@amitmerchant1990](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
-> Twitter [@amit_merchant](https://twitter.com/amit_merchant)
+> GitHub [@maricard18](https://github.com/maricard18) &nbsp;&middot;&nbsp;
+> Linkedin [Mario Henriques](https://www.linkedin.com/in/mario18)
 
