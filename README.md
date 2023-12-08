@@ -3,8 +3,8 @@
 ## Your very first library
 
 This project is about coding our own C library. <br>
-It's a very useful tool in future projects and has been updated with more functions than asked in the primary subject. <br>
-This project is in rank 0 of 42 common core and had passed with the score of 125.<br>
+It's a very useful tool in future projects and has been updated with more functions. <br>
+This project is in rank 0 of 42 common core and was graded with the score of 125/100.<br>
 -> [Subject here](https://github.com/maricard18/42-libft/blob/main/extras/en.subject.pdf)
 
 
